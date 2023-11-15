@@ -24,6 +24,6 @@ The data fueling this visualization originates from the Mozilla Location Service
 
 # Gallery
 
-![Demonstration Image 2](/demo-images/demo_2.png)
+![Demonstration Image 2](/demo-images/simple_demo_2.png)
 
-![Demonstration Image 3](/demo-images/demo_3.png)
+![Demonstration Image 3](/demo-images/simple_demo_3.png)
