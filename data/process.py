@@ -1,6 +1,4 @@
-import pandas as pd
 import json
-from tqdm import tqdm
 
 compiled = []
 totals = {}
@@ -20,12 +18,12 @@ for a in range(-90, 91, percision):
 for df in pd.read_csv('MLS-full-cell-export-2020-02-08T000000.csv', chunksize=10**6, usecols=['lat', 'lon', 'samples']):
 	lat = df['lat']
 	lon = df['lon']
-	for i in tqdm(range(0, len(lat), 1)):
+	for i in range(0, len(lat), 1):
 		c_lat = lat.iloc[i]
 		c_lon = lon.iloc[i]
 		totals[(round_base(c_lat), round_base(c_lon))] += 0.000009
 	
-for key in tqdm(totals):
+for key in totals:
 	if totals[key] != 0:
 		compiled.append(key[0])
 		compiled.append(key[1])
